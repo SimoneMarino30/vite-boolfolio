@@ -34,6 +34,9 @@ export default {
 <template>
   <AppHeader/>
   <div class="container">
+    <ul>
+      <li v-for="project in projects">{{ project.title }}</li>
+    </ul>
     <AppMain/>
   </div>
  
