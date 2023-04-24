@@ -5,10 +5,11 @@ import axios from "axios";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 
+
 export default {
   data() {
     return {
-      title: "Hello world",
+      title: "Vue Boolfolio",
       projects: [],
     }
   },
@@ -32,9 +33,9 @@ export default {
 </script>
 
 <template>
-  <AppHeader/>
+  <AppHeader :title="title"/>
   <div class="container">
-    <AppMain :projects="projects"/>
+    <AppMain :projects="projects" title="My Projects List" class="my-4"/>
   </div>
  
 </template>
