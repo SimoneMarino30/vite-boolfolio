@@ -31,7 +31,6 @@ export default {
       <div class="card-body">
         <h5 class="card-title" style="height: 5rem;">{{ project.title }}</h5>
         <p class="card-text" style="height: 8.5rem;">{{ project.description }}</p>
-        <!-- <p class="card-text" style="height: 8.5rem;">{{ project.technologies }}</p> -->
       </div>
     </div>      
 </template>
