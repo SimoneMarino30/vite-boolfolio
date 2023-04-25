@@ -36,7 +36,7 @@ export default {
 
   created() {
     this.fetchList();
-  }
+  },
 };
 </script>
 

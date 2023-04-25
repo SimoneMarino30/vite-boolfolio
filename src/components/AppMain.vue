@@ -29,12 +29,16 @@ export default {
     <nav aria-label="Project-pagination">
       <ul class="pagination">
         <li v-for="pagination in paginations" class="page-item">
-          <a class="page-link" href="#" v-html="pagination.label" 
-          @click="$emit('changePage', pagination.url)"
-          :class="{disabled: !pagination.url,
-          active: pagination.active}">
-    
-          </a>
+          <button 
+            type="button" 
+            class="page-link"  
+            @click="$emit('changePage', pagination.url)"
+            :class="{
+            disabled: !pagination.url,
+            active: pagination.active
+            }"
+            v-html="pagination.label"
+          ></button>
         </li>
       </ul>
     </nav>

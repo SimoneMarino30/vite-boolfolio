@@ -17,4 +17,4 @@ Nel componente principale della nostra Vue App facciamo una chiamata API all’e
 - **Milestone 5**
 Creiamo un nuovo componente ProjectCard, che corrisponde ad una card per visualizzare un progetto. Utilizziamo questo componente per visualizzare tutti i progetti ricevuti tramite API. ✔
 
-- **Bonus:** Gestire la paginazione dei risultati
+- **Bonus:** Gestire la paginazione dei risultati ✔
