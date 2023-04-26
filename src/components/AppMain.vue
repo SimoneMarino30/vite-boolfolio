@@ -1,43 +1,59 @@
 <script>
+// AXIOS CALL
+import axios from "axios";
+
+// COMPONENTS
 import ProjectCard from "./ProjectCard.vue";
+import AppPagination from "./AppPagination.vue";
+
+
 
 export default {
   name: 'AppMain',
 
-   props: {
-    projects: Array,
-    title: String,
-    paginations: Array,
+  data() {
+    return {
+      projects: {
+        list: [],
+        paginations: [],
+      },
+    };
   },
+
+  props: { title: String, },
   
-  components: { ProjectCard },
+  components: { ProjectCard, AppPagination },
+
+  emits: ['changePage'],
+
+  
+  methods: {
+    fetchList(endpoint = null) {
+      if(!endpoint) endpoint = 'http://127.0.0.1:8000/api/projects';
+      axios.get(endpoint)
+      // CIO' CHE VIENE LETTO DALL'API
+      .then((response) => {
+        this.projects.list = response.data.data;
+        this.projects.paginations = response.data.links;
+        // console.log(response.data);
+      });
+    },
+  },
+
+  created() {
+    this.fetchList();
+  },
 };
 </script>
 
 <template>
   <main>
     <h1>{{ title }}</h1>
-    <div class="d-flex flex-wrap" v-if="projects.length">
-      <ProjectCard v-for="project in projects" :key="project.id" :project="project" class="m-3"/>
+    <div class="d-flex flex-wrap" v-if="projects.list.length">
+      <ProjectCard v-for="project in projects.list" :key="project.id" :project="project" class="m-3"/>
     </div>
     <h2 v-else class="text-muted">Non ci sono progetti da mostrare</h2>
-    <!-- PAGINATION -->
-    <nav aria-label="Project-pagination">
-      <ul class="pagination">
-        <li v-for="pagination in paginations" class="page-item">
-          <button 
-            type="button" 
-            class="page-link"  
-            @click="$emit('changePage', pagination.url)"
-            :class="{
-            disabled: !pagination.url,
-            active: pagination.active
-            }"
-            v-html="pagination.label"
-          ></button>
-        </li>
-      </ul>
-    </nav>
+    <AppPagination :paginations="projects.paginations" @changePage="fetchList" />
   </main>
 </template>
 
