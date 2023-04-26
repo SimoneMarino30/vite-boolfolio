@@ -30,6 +30,7 @@ export default {
       .then((response) => {
         this.projects.list = response.data.data;
         this.projects.paginations = response.data.links;
+        console.log(response.data);
       });
     },
   },

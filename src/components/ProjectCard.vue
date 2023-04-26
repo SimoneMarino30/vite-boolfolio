@@ -48,7 +48,7 @@ export default {
             {{ technology.label }}
           </li>
         </ul>
-        <p>Type: {{ project.type.label }}</p>
+        <p>Type: {{ project.type?.label }}</p>
       </div>
     </div>      
 </template>
