@@ -25,9 +25,9 @@ Iniziamo ad occuparci della parte front-office della nostra applicazione: creiam
 26/4
 
 **Lato Laravel assicuratevi di:**
-- Aver aggiunto la funzione show all'Api\ProjectController
-- Aver recuperato le informazioni aggiuntive col il metodo with di Eloquent
-- Aver testato con postman il corretto funzionamento della API
+- Aver aggiunto la funzione show all'Api\ProjectController ✔
+- Aver recuperato le informazioni aggiuntive col il metodo with di Eloquent ✔
+- Aver testato con postman il corretto funzionamento della API ✔
 
 **Lato Vue assicuratevi di:**
 - Aver installato Vue Router: npm install vue-router@4 ✔
@@ -41,4 +41,4 @@ Iniziamo ad occuparci della parte front-office della nostra applicazione: creiam
 
 **BONUS:**
 - Realizzare un Loader
-- Gestire eventuali errori 404 (nelle chiamate axios e nel router)
+- Gestire eventuali errori 404 (nelle chiamate axios e nel router) ✔
