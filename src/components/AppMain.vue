@@ -2,11 +2,7 @@
 import ProjectCard from "./ProjectCard.vue";
 
 export default {
-  data() {
-    return {
-      // title: "Hello world"
-    }
-  },
+  name: 'AppMain',
 
    props: {
     projects: Array,
