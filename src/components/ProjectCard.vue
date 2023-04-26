@@ -25,12 +25,7 @@ export default {
 <template>
     <div class="card" style="width: 18rem;">
       <figure>
-          <!-- ! SOLUZIONE FAI DA TE -->
-          <div>
-            <img v-if="project.link" :src="project.link" alt="project-image" />
-            <img v-else src='https://www.frosinonecalcio.com/wp-content/uploads/bfi_thumb/default-placeholder-38gbdutk2nbrubtodg93tqlizprlhjpd1i4m8gzrsct8ss250.png' alt="placeholder-image" class="img-fluid"/>
-          </div>
-          
+          <img :src="project.link" alt="project-image" class="img-fluid"/>
           <figcaption>{{ project.date }}</figcaption>
       </figure>
       <div class="card-body">

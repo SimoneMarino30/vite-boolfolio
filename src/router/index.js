@@ -4,17 +4,19 @@ import DetailProjectPage from '../pages/DetailProjectPage.vue';
 
 const router = createRouter({
 history: createWebHistory(),
+linkActiveClass: 'active',
+linkExactActiveClass: '',
 routes: [
-{
-path: '/',
-name: 'home',
-component: HomePage,
-},
-{
-path: '/detail',
-name: 'detail',
-component: DetailProjectPage,
-},
-]
+  {
+    path: '/',
+    name: 'home',
+    component: HomePage,
+  },
+  {
+    path: '/detail',
+    name: 'detail',
+    component: DetailProjectPage,
+  },
+],
 });
 export { router };
