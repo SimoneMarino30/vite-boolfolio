@@ -7,8 +7,12 @@ export default {
     return {
       title: "DetailProjectPage"
     }
-  }
+  },
 
+  // !  MI ARRIVA UN OGGETTO VUOTO(PROTOTYPE OBJECT)
+  created() {
+    console.log(this.$route.params);
+  }
   // components: {
   //   MyComponent,
   // },

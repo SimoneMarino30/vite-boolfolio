@@ -17,7 +17,7 @@ export default {
         list: [],
         paginations: [],
       },
-    };
+    }
   },
 
   props: { title: String, },

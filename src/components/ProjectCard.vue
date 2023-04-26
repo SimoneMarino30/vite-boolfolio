@@ -12,6 +12,7 @@ export default {
     project: Object,
   },
 
+
   // computed: {
 
   // },
@@ -40,6 +41,15 @@ export default {
           </li>
         </ul>
         <p>Type: {{ project.type?.label }}</p>
+        <router-link :to="{
+          name: 'detail', 
+          params: {
+            id: project.id
+          }
+        }">
+        Vai al dettaglio
+        <!-- ! QUANDO PASSO IL PARAMETRO :ID IN INDEX.JS SI ROMPE TUTTO -->
+      </router-link>
       </div>
     </div>      
 </template>
