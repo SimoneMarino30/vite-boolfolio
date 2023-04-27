@@ -14,12 +14,12 @@ routes: [
     component: HomePage,
   },
   {
-    path: '/detail/:id',
+    path: '/projects/:id',
     name: 'detail',
     component: DetailProjectPage,
   },
   {
-    path: '/404',
+    path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: NotFoundPage,
   },

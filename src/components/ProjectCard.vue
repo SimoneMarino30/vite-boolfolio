@@ -2,24 +2,12 @@
 // import MyComponent from "./components/MyComponent.vue";
 
 export default {
-  data() {
-    return {
-      // title: "Hello world"
-    }
-  },
+  
+  name: 'project-card',
 
-   props: {
+  props: {
     project: Object,
   },
-
-
-  // computed: {
-
-  // },
-
-  // components: {
-  //   MyComponent,
-  // },
 };
 </script>
 
@@ -41,15 +29,15 @@ export default {
           </li>
         </ul>
         <p>Type: {{ project.type?.label }}</p>
-        
+
         <router-link :to="{
           name: 'detail', 
           params: {
             id: project.id
           }
         }">
-        Vai al dettaglio
-        <!-- ! QUANDO PASSO IL PARAMETRO :ID IN INDEX.JS SI ROMPE TUTTO -->
+        <button>Vai al dettaglio</button>
+        
       </router-link>
       </div>
     </div>      
