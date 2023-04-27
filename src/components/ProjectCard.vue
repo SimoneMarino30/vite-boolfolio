@@ -7,6 +7,7 @@ export default {
 
   props: {
     project: Object,
+    isDetail: Boolean,
   },
 };
 </script>
@@ -30,14 +31,17 @@ export default {
         </ul>
         <p>Type: {{ project.type?.label }}</p>
 
-        <router-link :to="{
+        <router-link 
+        v-if="!isDetail"
+        class="btn btrn-success btn-sm"
+        :to="{
           name: 'detail', 
           params: {
-            id: project.id
+          id: project.id
           }
         }">
         
-        <button>Vai al dettaglio</button>
+       Vai al dettaglio
         
       </router-link>
       

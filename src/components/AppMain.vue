@@ -24,7 +24,7 @@ export default {
 
   props: { title: String, },
   
-  components: { ProjectCard, AppPagination,  },
+  components: { ProjectCard, AppPagination },
 
   emits: ['changePage'],
 
@@ -41,6 +41,8 @@ export default {
       .then((response) => {
         this.projects.list = response.data.data;
         this.projects.paginations = response.data.links;
+       
+        console.log(response.data.links);
         // console.log(this.projects);
       })
       .catch((err) => {
@@ -62,9 +64,16 @@ export default {
 <template>
   <main>
     <h1>{{ title }}</h1>
+    
     <AppLoader v-if="isLoading"/>
-    <div class="d-flex flex-wrap" v-if="projects.list.length">
-      <ProjectCard v-for="project in projects.list" :key="project.id" :project="project" class="m-3"/>
+
+   
+      <div v-if="error" class="alert alert-danger" role="alert">
+        {{error}}
+      </div>
+
+    <div class="d-flex flex-wrap" v-else-if="projects.list.length">
+      <ProjectCard v-for="project in projects.list" :key="project.id" :project="project" :isDetail="false" class="m-3"/>
     </div>
     <h2 v-else class="text-muted">Non ci sono progetti da mostrare</h2>
     <AppPagination :paginations="projects.paginations" @changePage="fetchList" />

@@ -10,7 +10,6 @@ export default {
   data() {
     return {
       project: null,
-      title: "DetailProjectPage"
     }
   },
 
@@ -25,14 +24,17 @@ export default {
     .then((response) => {
       if (response.data && response.data.length > 0)
       this.project = response.data[0];
-        // console.log(response.data[0]);
+
+        console.log(response.data[0]);
       })
     .catch((err) => {
-      this.$router.push({name: 'not-found'})
+      console.log(err);
+      // se c'e un errore
+      this.$router.push({name: 'not-found'});
     })
     .finally(() => {
        
-    A});
+    });
   },
   
   
@@ -41,9 +43,9 @@ export default {
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <h1>{{ project?.title }}</h1>
 
-  <ProjectCard :project="project" v-if="project"/>
+  <ProjectCard :project="project" v-if="project" :isDetail="true"/>
 </template>
 
 <style lang="scss" scoped></style>
