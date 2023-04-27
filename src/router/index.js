@@ -14,9 +14,7 @@ routes: [
     component: HomePage,
   },
   {
-  //  ! QUANDO PASSO IL PARAMETRO :ID IN INDEX.JS SI ROMPE TUTTO 
-    // path: '/detail/:id',
-    path: '/detail/',
+    path: '/detail/:id',
     name: 'detail',
     component: DetailProjectPage,
   },

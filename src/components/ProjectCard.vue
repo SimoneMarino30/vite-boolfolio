@@ -41,6 +41,7 @@ export default {
           </li>
         </ul>
         <p>Type: {{ project.type?.label }}</p>
+        
         <router-link :to="{
           name: 'detail', 
           params: {
