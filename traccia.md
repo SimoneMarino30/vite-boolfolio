@@ -37,7 +37,7 @@ Iniziamo ad occuparci della parte front-office della nostra applicazione: creiam
 - Aver inserito il componente <router-view /> in app.vue ✔
 - Aver inserito le voci di menu dinamicamente con i <router-link> nelle card dei progetti ✔
 - Aver inserito la pagina di dettaglio che legge il parametro :id o :slug e fa una chiamata coerente alla API preparata precedentemente ✔
-- Visualizzare correttamente le informazioni ricevute
+- Visualizzare correttamente le informazioni ricevute ✔
 
 **BONUS:**
 - Realizzare un Loader

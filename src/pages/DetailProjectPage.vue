@@ -17,22 +17,22 @@ export default {
   components: { ProjectCard,  },
 
   created() {
-    console.log(this.$route.params.id);
+    // console.log(this.$route.params.id);
 
     axios
-      .get(`http://127.0.0.1:8000/api/projects/${this.$route.params.id}`)
-      // CIO' CHE VIENE LETTO DALL'API
-      .then((response) => {
-        this.project = response.data;
-        // console.log(response.data);
+    .get(`http://127.0.0.1:8000/api/projects/${this.$route.params.id}`)
+     // CIO' CHE VIENE LETTO DALL'API
+    .then((response) => {
+      if (response.data && response.data.length > 0)
+      this.project = response.data[0];
+        // console.log(response.data[0]);
       })
-      .catch((err) => {
-        this.$router.push({name: 'not-found'})
-      })
-      .finally(() => {
+    .catch((err) => {
+      this.$router.push({name: 'not-found'})
+    })
+    .finally(() => {
        
-      });
-      console.log(this.$route.params.id);
+    A});
   },
   
   

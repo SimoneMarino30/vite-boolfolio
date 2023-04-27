@@ -36,9 +36,11 @@ export default {
             id: project.id
           }
         }">
+        
         <button>Vai al dettaglio</button>
         
       </router-link>
+      
       </div>
     </div>      
 </template>

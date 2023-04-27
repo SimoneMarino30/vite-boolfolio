@@ -19,6 +19,7 @@ export default {
   <AppHeader :title="title"/>
   <div class="container">
     <router-view></router-view>
+    
   </div>
 </template>
 
