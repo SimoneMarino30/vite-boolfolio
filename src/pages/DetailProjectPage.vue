@@ -22,10 +22,10 @@ export default {
     .get(`http://127.0.0.1:8000/api/projects/${this.$route.params.id}`)
      // CIO' CHE VIENE LETTO DALL'API
     .then((response) => {
-      if (response.data && response.data.length > 0)
-      this.project = response.data[0];
+      if (response.data)
+      this.project = response.data;
 
-        console.log(response.data[0]);
+        console.log(response.data);
       })
     .catch((err) => {
       console.log(err);

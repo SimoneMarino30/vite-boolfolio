@@ -17,8 +17,12 @@ export default {
 </script>
 
 <template>
-  <div class="layover">
-    Loading
+  <section></section>
+  <div id="app" class="layover">
+    <div class="spinner-border mx-2" role="status">
+    </div>
+    <span class="sr-only">Loading...</span>
+    
   </div>
 </template>
 
