@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import { router } from './router';
 
 import '../node_modules/bootstrap/scss/bootstrap.scss';
+import '../node_modules/bootstrap/dist/js/bootstrap';
 import App from './App.vue';
 import AppLoader from './components/AppLoader.vue';
 
