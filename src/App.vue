@@ -26,5 +26,7 @@ export default {
 
 
 <style lang="scss">
-
+  body {
+    font-family: 'League Spartan', sans-serif;
+  }
 </style>
