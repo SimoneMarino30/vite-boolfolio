@@ -27,6 +27,7 @@ export default {
   display: flex;
   flex-direction: column-reverse;
   margin-top: auto;
+  // padding-right: 3rem;
   // position: fixed;
   // bottom: 0;
 

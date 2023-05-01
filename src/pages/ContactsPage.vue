@@ -1,21 +1,24 @@
 <script>
-// import MyComponent from "./components/MyComponent.vue";
+import AppMailTo from '../components/AppMailTo.vue';
+import AppSocialLinks from '../components/AppSocialLinks.vue';
+
 
 export default {
-  data() {
-    return {
-      title: "CONTACTS"
-    }
-  }
+    
+  components: { AppMailTo, AppSocialLinks }
 
-  // components: {
-  //   MyComponent,
-  // },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <div class="container">
+    <AppMailTo class="contacts"/>
+    <AppSocialLinks/>
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .contacts {
+    writing-mode: horizontal-tb;
+  }
+</style>

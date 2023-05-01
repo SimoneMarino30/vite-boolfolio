@@ -37,19 +37,19 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  section {
+section {
     // border: 2px solid yellowgreen;
     flex-direction: row;
     display: flex;
     
     
-    .central-box {
-    // border: 2px solid yellow;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    height: 88vh;
+  .central-box {
+  // border: 2px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 88vh;
 
     .name {
       font-size: 4rem;
@@ -59,10 +59,10 @@ export default {
     }
  
     .info-box {
-    height: 33rem;
-    width: 33rem;
-    border: 2px solid yellowgreen;
+      min-height: 33rem;
+      max-width: 33rem;
+      border: 2px solid yellowgreen;
     }
   }
-  } 
+} 
 </style>

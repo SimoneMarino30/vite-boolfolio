@@ -10,16 +10,16 @@ export default {
     },
     components: { ContactsPage }
 };
+
+
 </script>
 
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 1px solid yellowgreen">
-    <div class="container">
-      <a class="navbar-brand" href="#">{{ title }}</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler m-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse ms-auto flex-grow-0" id="navbarNav">
+      <div class="collapse navbar-collapse m-auto flex-grow-0" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
            <router-link :to="{ name: 'home' }" class="nav-link">
@@ -40,7 +40,6 @@ export default {
           </li>
         </ul>
       </div>
-    </div>
   </nav>
 </template>
 
