@@ -17,7 +17,7 @@ export default {
 <template>
   <div class="contact-mail mb-5 col-1">
       
-      <a href="mailto:simo.marino@outlook.com" class="d-flex flex-row text-decoration-none ms-5" style="color: yellowgreen">simo.marino@outlook.com</a>
+      <a href="mailto:simo.marino@outlook.com" class="d-flex flex-row text-decoration-none ms-5 fs-5" style="color: yellowgreen">simo.marino@outlook.com</a>
     </div>
 </template>
 
