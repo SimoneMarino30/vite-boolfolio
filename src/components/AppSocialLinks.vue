@@ -42,8 +42,9 @@ export default {
 .social-links {
   display: flex;
   flex-direction: column;
-  // border: 2px solid blue;
   margin-top: auto;
+  // position: fixed;
+  // bottom: 0;
     a {
       padding: 1rem;
     }

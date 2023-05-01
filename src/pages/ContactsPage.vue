@@ -4,7 +4,7 @@
 export default {
   data() {
     return {
-      title: "CONTACTS 2"
+      title: "CONTACTS"
     }
   }
 

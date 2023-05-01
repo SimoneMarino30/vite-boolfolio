@@ -44,9 +44,5 @@ export default {
   </nav>
 </template>
 
-<style lang="scss" scoped>
-  .debug {
-    background-color: yellowgreen;
-  }
-</style>
+<style lang="scss" scoped></style>
 

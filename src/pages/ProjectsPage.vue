@@ -4,6 +4,8 @@ import axios from "axios";
 
 // COMPONENTS
 import ProjectCard from "../components/ProjectCard.vue";
+import AppSocialLinks from "../components/AppSocialLinks.vue";
+import AppMailTo from "../components/AppMailTo.vue";
 import AppPagination from "../components/AppPagination.vue";
 
 export default {
@@ -22,7 +24,7 @@ export default {
 
   props: { title: String, },
   
-  components: { ProjectCard, AppPagination },
+  components: { ProjectCard, AppPagination, AppSocialLinks, AppMailTo },
 
   emits: ['changePage'],
 
@@ -60,22 +62,37 @@ export default {
 </script>
 
 <template>
-  <main>
-    <h1>{{ title }}</h1>
-    
-    <AppLoader v-if="isLoading"/>
-
-   
+  <section class="row">
+    <AppSocialLinks/>
+    <div class="col-10 projects-box">
+      <h1>{{ title }}</h1>
+      <AppLoader v-if="isLoading"/>
       <div v-if="error" class="alert alert-danger" role="alert">
         {{error}}
       </div>
-
-    <div class="d-flex flex-wrap" v-else-if="projects.list.length">
-      <ProjectCard v-for="project in projects.list" :key="project.id" :project="project" :isDetail="false" class="m-3"/>
+      <div class="d-flex flex-wrap" v-else-if="projects.list.length">
+        <ProjectCard v-for="project in projects.list" :key="project.id" :project="project" :isDetail="false" class="m-3"/>
+      </div>
+      <h2 v-else class="text-muted">Non ci sono progetti da mostrare</h2>
+      <AppPagination :paginations="projects.paginations" @changePage="fetchList" />
     </div>
-    <h2 v-else class="text-muted">Non ci sono progetti da mostrare</h2>
-    <AppPagination :paginations="projects.paginations" @changePage="fetchList" />
-  </main>
+    <AppMailTo/>
+  </section>
+  
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+section {
+  // border: 2px solid yellowgreen;
+  flex-direction: row;
+  display: flex;
+
+  .projects-box {
+      // border: 2px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}  
+</style>
+    
