@@ -15,10 +15,9 @@ export default {
 </script>
 
 <template>
-  <div class="contact-mail mb-5 col-1">
-      
-      <a href="mailto:simo.marino@outlook.com" class="d-flex flex-row text-decoration-none ms-5 fs-5" style="color: yellowgreen">simo.marino@outlook.com</a>
-    </div>
+  <div class="contact-mail">
+    <a href="mailto:simo.marino@outlook.com" class="text-decoration-none fs-5" style="color: yellowgreen">simo.marino@outlook.com <hr></a>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -26,15 +25,10 @@ export default {
   writing-mode: vertical-lr;
   display: flex;
   flex-direction: column-reverse;
-  margin-top: auto;
+  // margin-top: auto;
   // padding-right: 3rem;
-  // position: fixed;
-  // bottom: 0;
-
-  a {
-        padding: 1rem;
-      }
-  }
-
-  
+  position: fixed;
+  bottom: 10rem;
+  right: 1rem;
+}
 </style>

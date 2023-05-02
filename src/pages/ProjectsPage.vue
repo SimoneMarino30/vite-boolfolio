@@ -63,7 +63,10 @@ export default {
 
 <template>
   <section class="row">
-    <AppSocialLinks/>
+    <div class="col-1 mt-auto">
+      <AppSocialLinks/>
+    </div>
+    
     <div class="col-10 projects-box">
       <h1>{{ title }}</h1>
       <AppLoader v-if="isLoading"/>
@@ -76,7 +79,11 @@ export default {
       <h2 v-else class="text-muted">Non ci sono progetti da mostrare</h2>
       <AppPagination :paginations="projects.paginations" @changePage="fetchList" />
     </div>
-    <AppMailTo/>
+    
+    <div class="col-1 mt-auto">
+      <AppMailTo/>
+    </div>
+    
   </section>
   
 </template>
