@@ -50,7 +50,11 @@ export default {
     <AppSocialLinks/>
     <div class="col-10 project-box">
       <ProjectCard :project="project" v-if="project" :isDetail="true"/>
+        <router-link :to="{ name: 'projects' }" class="nav-link mt-5">
+          <button class="btn btn-success">Back to Projects</button> 
+        </router-link>
     </div>
+    
     <AppMailTo/>
   </section>
 </template>
@@ -64,6 +68,7 @@ section {
     .project-box {
       // border: 2px solid yellow;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
