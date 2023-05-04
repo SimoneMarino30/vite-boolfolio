@@ -50,8 +50,8 @@ export default {
     <AppSocialLinks/>
     <div class="col-10 project-box">
       <ProjectCard :project="project" v-if="project" :isDetail="true"/>
-        <router-link :to="{ name: 'projects' }" class="nav-link mt-5">
-          <button class="btn btn-success">Back to Projects</button> 
+        <router-link :to="{ name: 'projects' }" class="mt-5">
+          <button class="position-relative z-3 btn btn-success">Back to Projects</button> 
         </router-link>
     </div>
     

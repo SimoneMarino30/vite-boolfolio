@@ -33,7 +33,7 @@ export default {
           <!-- I am a Junior Web Developer passionate about both front-end and back-end technologies.  I have a solid knowledge of HTML, CSS, and JavaScript, as well as leading front-end  frameworks like Vue.js. I have experience creating web applications using the PHP  programming language and the Laravel back-end framework, which enables me to build   highly performant and scalable websites. I am capable of creating modern and responsive   user interfaces using the best responsive design practices, and I am always seeking new   challenges to enhance my skills and provide innovative solutions for my clients -->
         </h4>
 
-        <router-link :to="{ name: 'projects' }" class="nav-link mt-5">
+        <router-link :to="{ name: 'projects' }" class="mt-5">
           <button class="btn btn-success">Checkout my Projects</button> 
         </router-link>
 
