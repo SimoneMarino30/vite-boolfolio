@@ -1,4 +1,4 @@
-<script>
+<script default>
 // COMPONENTS
 import AppMailTo from '../components/AppMailTo.vue';
 import AppSocialLinks from '../components/AppSocialLinks.vue';

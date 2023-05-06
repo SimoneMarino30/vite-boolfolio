@@ -22,8 +22,10 @@ export default {
       <div class="collapse navbar-collapse m-auto flex-grow-0" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-           <router-link :to="{ name: 'home' }" class="nav-link">
-             Homepage
+            <router-link :to="{ name: 'home' }" class="nav-link">
+              <a class="navbar-brand" href="#" style="border: 1px solid yellowgreen">
+                <img src="../assets/logo.png" alt="logo" width="100" height="24">
+              </a>
             </router-link>
           </li>
 

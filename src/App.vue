@@ -17,16 +17,15 @@ export default {
 </script>
 
 <template>
-  <AppHeader :title="title"/>
+  <AppHeader :title="title" />
   <div class="container-fluid">
     <router-view></router-view>
   </div>
-  
 </template>
 
 
 <style lang="scss">
-  body {
-    font-family: 'League Spartan', sans-serif;
-  }
+body {
+  font-family: 'League Spartan', sans-serif;
+}
 </style>
