@@ -19,17 +19,17 @@ export default {
 
 
 
-    <div class="central-box img-fluid" style="border: 1px solid red">
-      <div class="info-box text-start p-3" style="border: 1px solid blue">
+    <div class="central-box img-fluid" style="border: 1px solid red"> <!---->
+      <div class="info-box text-start p-3" style="border: 1px solid blue"> <!---->
         <div class="img-bg  my-3"></div>
-        <div class="home-text w-75" style="border: 1px solid coral">
-          <h1>
+        <div class="home-text mx-auto" style="border: 1px solid lightseagreen"> <!---->
+          <div class="home-title" style="border: 1px solid coral"> <!---->
             Developing things for the web.
-          </h1>
-          <h4 class="mt-5">
-            I’m a junior web developer specializing in building and occasionally designing exceptional digital
+          </div>
+          <div class="home-sub-title mt-5">
+            I’m a junior web developer specializing in building and designing exceptional digital
             experiences.
-            <br>
+            <br class="mb-3">
             Currently, I’m seeking new opportunities to further improve my passion/work in this field.
 
             <!-- ************ -->
@@ -38,11 +38,11 @@ export default {
           In my portfolio, you will find a selection of my most significant web development projects. -->
             <!-- **** TEXT FOR ABOUT MAYBE? **** -->
             <!-- I am a Junior Web Developer passionate about both front-end and back-end technologies.  I have a solid knowledge of HTML, CSS, and JavaScript, as well as leading front-end  frameworks like Vue.js. I have experience creating web applications using the PHP  programming language and the Laravel back-end framework, which enables me to build   highly performant and scalable websites. I am capable of creating modern and responsive   user interfaces using the best responsive design practices, and I am always seeking new   challenges to enhance my skills and provide innovative solutions for my clients -->
-          </h4>
+          </div>
         </div>
 
         <router-link :to="{ name: 'projects' }" class="mt-5">
-          <button class="btn btn-success">Checkout my Projects</button>
+          <button class="btn">Checkout my Projects</button>
         </router-link>
       </div>
     </div>
@@ -81,14 +81,29 @@ section {
     margin: auto;
 
     .img-bg {
-      width: 80%;
-      height: 15rem;
+      width: 70%;
+      height: 12rem;
       background-image: url(../assets/home-waves.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      border: 2px solid violet;
+      // border: 2px solid violet;
     }
+
+    .home-title {
+      font-size: 4rem;
+      color: rgb(55, 139, 83);
+    }
+
+    .home-sub-title {
+      width: 50%;
+      font-size: 1rem;
+    }
+  }
+
+  .btn {
+    background-color: rgb(55, 139, 83);
+    color: black;
   }
 }
 </style>

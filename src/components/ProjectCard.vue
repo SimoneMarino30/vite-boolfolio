@@ -16,8 +16,8 @@ export default {
   <div class="card position-relative my-5">
     <img class="card-img-top border border-secondary rounded" :src="project.link" alt="MyIcon">
     <div class="card-img-overlay d-flex flex-column justify-content-end">
-      <h5 class="card-title text-light">{{ project.title }}</h5>
-      <p class="card-text text-light">{{ project.date }}</p>
+      <h5 class="card-title">{{ project.title }}</h5>
+      <p class="card-text text-center">{{ project.date }}</p>
       <div class="testo-bordato">
         <span class="badge p-1" :style="{ backgroundColor: project.type?.color }">{{ project.type?.label }}</span>
       </div>
@@ -40,6 +40,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.card {
+  color: rgb(55, 139, 83);
+}
+
 .testo-bordato {
   color: #000;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
@@ -78,7 +82,7 @@ export default {
 .card-text {
   margin: 0 0 1rem;
   /* Imposta il margine inferiore per il titolo e il testo */
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 2px yellowgreen;
   /* Imposta l'ombra del bordo dell'immagine */
 }

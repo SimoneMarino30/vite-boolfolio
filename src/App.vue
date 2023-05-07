@@ -18,7 +18,7 @@ export default {
 
 <template>
   <AppHeader :title="title" />
-  <div class="container-fluid">
+  <div class="container">
     <router-view></router-view>
   </div>
 </template>
@@ -26,6 +26,8 @@ export default {
 
 <style lang="scss">
 body {
-  font-family: 'League Spartan', sans-serif;
+  font-family: 'Farro', sans-serif;
+  color: #8892b0;
 }
 </style>
+
